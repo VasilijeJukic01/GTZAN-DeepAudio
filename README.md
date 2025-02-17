@@ -107,7 +107,7 @@ XGBoost outperformed YAMNet in terms of accuracy on the dataset, while YAMNet te
 <img src="images/yamnet.png" alt="yamnet" width="70%">
 
 # KNN Music Recommendation System
-The KNN algorithm is used for implementing a music recommendation system. It can recommends songs based on similarity measured between feature vectors extracted from audio files. Instead of using Euclidean distance, we will go for a Cosine distance (it better captures feature vector relationships in high-dimensional space).
+The KNN algorithm is used for implementing a music recommendation system. It can recommend songs based on similarity measured between feature vectors extracted from audio files. Instead of using Euclidean distance, we will go for a Cosine distance (it better captures feature vector relationships in high-dimensional space).
 
 **How it Works** <br>
 1. Extract MFCCs, Chroma Features, and Spectral Features from the dataset.
