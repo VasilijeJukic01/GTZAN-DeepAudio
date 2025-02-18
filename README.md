@@ -34,7 +34,7 @@ MFCCs are a representation of the short-term power spectrum of a sound, based on
 
 <img src="images/mfcc_process.png" alt="mfccp">
 
-**How MFCCs Work?** <br>
+**How MFCCs work?** <br>
 1. The audio signal is divided into short frames (20-40 ms).
 2. Fourier Transform (FFT) converts the signal from time-domain to frequency-domain.
 3. The frequency spectrum is mapped to the mel scale, approximating human hearing perception.
@@ -96,12 +96,17 @@ XGBoost outperformed YAMNet in terms of accuracy on the dataset, while YAMNet te
 
 | Genre     | YAMNet Precision | YAMNet Recall | YAMNet F1-score | XGBoost Precision | XGBoost Recall | XGBoost F1-score |
 |-----------|-----------------|--------------|----------------|-------------------|--------------|----------------|
-| Rock      | 0.70            | 0.80         | 0.74           | 0.91              | 0.84         | 0.87           |
-| Country   | 0.94            | 0.80         | 0.86           | 0.81              | 0.87         | 0.84           |
-| Classical | 0.95            | 1.00         | 0.98           | 0.93              | 0.97         | 0.95           |
+| Rock      | 0.58            | 0.70         | 0.64           | 0.91              | 0.84         | 0.87           |
+| Country   | 0.88            | 0.70         | 0.78           | 0.81              | 0.87         | 0.84           |
+| Classical | 0.95            | 0.95         | 0.95           | 0.93              | 0.97         | 0.95           |
 | Hip-Hop   | 0.89            | 0.85         | 0.87           | 0.96              | 0.90         | 0.93           |
 | Metal     | 0.95            | 0.95         | 0.95           | 0.94              | 0.96         | 0.95           |
-| **Overall Accuracy** | **0.86** | | | **0.91** | |
+| Blues     | 0.89            | 0.85         | 0.87           | 0.90              | 0.89         | 0.89           |
+| Pop       | 0.68            | 0.85         | 0.76           | 0.95              | 0.96         | 0.96           |
+| Reggae    | 0.95            | 0.90         | 0.92           | 0.93              | 0.91         | 0.92           |
+| Jazz      | 1.00            | 0.90         | 0.95           | 0.88              | 0.92         | 0.90           |
+| Disco     | 0.80            | 0.80         | 0.80           | 0.89              | 0.90         | 0.90           |
+| **Overall Accuracy** | **0.86** | | | **0.91** | | |
 
 <img src="images/xgboost.png" alt="xgboost" width="70%">
 <img src="images/yamnet.png" alt="yamnet" width="70%">
@@ -109,7 +114,9 @@ XGBoost outperformed YAMNet in terms of accuracy on the dataset, while YAMNet te
 # KNN Music Recommendation System
 The KNN algorithm is used for implementing a music recommendation system. It can recommend songs based on similarity measured between feature vectors extracted from audio files. Instead of using Euclidean distance, we will go for a Cosine distance (it better captures feature vector relationships in high-dimensional space).
 
-**How it Works** <br>
+<img src="images/knn.png" alt="knn" width="70%">
+
+**How it works?** <br>
 1. Extract MFCCs, Chroma Features, and Spectral Features from the dataset.
 2. Normalize and scale the feature vectors using StandardScaler.
 3. Train a model using cosine distance.
